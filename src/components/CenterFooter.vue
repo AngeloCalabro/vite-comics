@@ -4,26 +4,26 @@
             <div class="cols">
                 <div>
                     <ul>
-                        <span>DC Comics</span>
+                        <h3>DC Comics</h3>
                         <li v-for="(link, index) in links" :key="index">
                         <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
                         </li>
                     </ul>
                     <ul>
-                        <span>Shop</span>
+                        <h3>Shop</h3>
                         <li v-for="(link, index) in shop" :key="index">
                         <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
                         </li>
                     </ul>
                 </div>
                 <ul>
-                    <span>Shop</span>
+                    <h3>Shop</h3>
                         <li v-for="(link, index) in linksDc" :key="index">
                         <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
                         </li>
                 </ul>
                 <ul>
-                    <span>Sites</span>
+                    <h3>Sites</h3>
                         <li v-for="(link, index) in sites" :key="index">
                         <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
                         </li>
@@ -199,33 +199,32 @@ section{
         background-image: url(../assets/img/footer-bg.jpg);
         background-repeat: no-repeat;
         background-position: center;
-        height: 300px;
         div.container{
             @include center(between);
             div.cols{
                 @include center(vertical);
                 ul{
-            list-style: none;
-                span{
-                    color: $white;
-                    font-weight: 600;
-                    padding-bottom: 1rem;
-                    text-transform: uppercase;
-                }
-                li a{
-                    display: inline-block;
-                    text-decoration: none;
-                    text-transform: capitalize;
-                    font-size: $fs-s;
-                    color: $grey;
-                    transition: color 0.3s;
+                    list-style: none;
+                    margin: 1rem;
+                    h3{
+                        color: $white;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        padding-bottom: 1rem;
+                    }
+                    li a{
+                        display: inline-block;
+                        text-decoration: none;
+                        text-transform: capitalize;
+                        font-size: $fs-s;
+                        color: $grey;
+                        transition: color 0.3s;
 
-                &:hover {
-                    color: $blue;
-                    border-bottom: 3px solid $blue;
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
                 }
-            }
-        }
 
             img{
                 max-width: 100%;

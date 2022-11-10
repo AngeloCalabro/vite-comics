@@ -1,7 +1,7 @@
 <template>
   <HeaderComponent/>
   <main>
-  
+    <div>&lt; Content goes here &lt;</div>
   </main>
   <FooterComponent/>
  </template>
@@ -19,5 +19,11 @@
  </script>
  
  <style lang="scss" scoped>
- 
+@use './assets/styles/partials/variables' as *;
+@use './assets/styles/partials/mixins' as *;
+
+ main{
+  color: $black;
+ }
+
  </style>
