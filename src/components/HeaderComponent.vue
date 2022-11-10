@@ -27,7 +27,7 @@
                     {
                         text: 'comics',
                         url: '#',
-                        status: false
+                        status: true
                     },
                     {
                         text: 'movies',
@@ -82,7 +82,9 @@ header{
     width: 100%;
     height: 118px;
     background-color: $white;
+    text-align: center;
     div{
+        height: 100%;
         @include center(between);
         a{
             display: inline-block;
@@ -96,15 +98,14 @@ header{
                 padding: 1rem;
                 text-decoration: none;
                 font-weight: 600;
+                text-transform: uppercase;
                 color: $black;
+                transition: color 0.3s;
 
                 &.active,
                 &:hover {
                     color: $blue;
-                    
-                    &::after{
-
-                    }
+                    border-bottom: 3px solid $blue;
                 }
             }
         }
