@@ -1,0 +1,116 @@
+<template>
+    <header>
+        <div class="container">
+            <a href="">
+                <img src="../assets/img/dc-logo.png" alt="logo">
+            </a>
+            <ul>
+                <li v-for="(link, index) in links" :key="index">
+                    <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+</template>
+
+<script>
+    export default {
+        name: 'HeaderComponent',
+        data(){
+            return{
+                links: [
+                    {
+                        text: 'characters',
+                        url: '#',
+                        status: false
+                    },
+                    {
+                        text: 'comics',
+                        url: '#',
+                        status: false
+                    },
+                    {
+                        text: 'movies',
+                        url: '#',
+                        status: false
+                    },
+                    {
+                        text: 'tv',
+                        url: '#',
+                        status: false
+                    },
+                    {
+                        text: 'games',
+                        url: '#',
+                        status: false
+                    },
+                    {
+                        text: 'collectibles',
+                        url: '#',
+                        status: false
+                    },
+                    {
+                        text: 'videos',
+                        url: '#',
+                        status: false
+                    },
+                    {
+                        text: 'fans',
+                        url: '#',
+                        status: false
+                    },
+                    {
+                        text: 'news',
+                        url: '#',
+                        status: false
+                    },
+                    {
+                        text: 'shop',
+                        url: '#',
+                        status: false
+                    },
+                ]
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+@use '../assets/styles/partials/variables' as *;
+@use '../assets/styles/partials/mixins' as *;
+header{
+    width: 100%;
+    height: 118px;
+    background-color: $white;
+    div{
+        @include center(between);
+        a{
+            display: inline-block;
+        }
+        ul{
+            list-style: none;
+            margin: 2.5rem 1rem 4rem;
+            @include dflex;
+            li a{
+                display: inline-block;
+                padding: 1rem;
+                text-decoration: none;
+                font-weight: 600;
+                color: $black;
+
+                &.active,
+                &:hover {
+                    color: $blue;
+                    
+                    &::after{
+
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
+</style>
