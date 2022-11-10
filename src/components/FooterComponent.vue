@@ -20,11 +20,11 @@ import SocialFooter from './SocialFooter.vue';
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
 @use '../assets/styles/partials/mixins' as *;
-footer{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
+// footer{
+//     position: fixed;
+//     bottom: 0;
+//     right: 0;
+//     left: 0;
+// }
 
 </style>

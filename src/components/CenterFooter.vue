@@ -30,7 +30,7 @@
                 </ul>
             </div>
             <div>
-                <!-- <img src="../assets/img/dc-logo-bg.png" alt="logo"> -->
+                <!-- <img class="logo-img" src="../assets/img/dc-logo-bg.png" alt="logo"> -->
             </div>
         </div>
     </section>
@@ -226,7 +226,7 @@ section{
                     }
                 }
 
-            img{
+            img.logo-img{
                 max-width: 100%;
                 overflow: hidden;
                 object-position: center;

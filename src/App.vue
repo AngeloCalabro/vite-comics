@@ -1,29 +1,22 @@
 <template>
   <HeaderComponent/>
-  <main>
-    <div>&lt; Content goes here &lt;</div>
-  </main>
+  <MainComponent/> 
   <FooterComponent/>
- </template>
+</template>
  
- <script>
- import HeaderComponent from './components/HeaderComponent.vue';
- import FooterComponent from './components/FooterComponent.vue';
-  export default {
-    components: {
-      HeaderComponent,
-      FooterComponent,
+<script>
+    import HeaderComponent from './components/HeaderComponent.vue';
+    import MainComponent from './components/MainComponent.vue';
+    import FooterComponent from './components/FooterComponent.vue';
+    export default {
+        components: {
+            HeaderComponent,
+            FooterComponent,
+            MainComponent
+        }
     }
-    
-  }
- </script>
+</script>
  
- <style lang="scss" scoped>
-@use './assets/styles/partials/variables' as *;
-@use './assets/styles/partials/mixins' as *;
+<style lang="scss" scoped>
 
- main{
-  color: $black;
- }
-
- </style>
+</style>
