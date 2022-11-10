@@ -22,6 +22,7 @@ img{
 .button{
     width: max-content;
     padding: 1rem;
+    transition: scale 0.5s;
     &:hover{
         cursor: pointer;
         scale: 0.9;

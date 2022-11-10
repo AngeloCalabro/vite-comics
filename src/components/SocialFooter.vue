@@ -94,9 +94,9 @@
                 @include dflex;
                 }
             li img{
-                
+                transition: scale 0.5s;
                 &:hover{
-                    scale: 0.9;
+                    scale: 1.2;
                 }
             }   
         }
