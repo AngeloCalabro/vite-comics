@@ -18,3 +18,12 @@ img{
     margin: 0 auto;
     padding: 1rem;
 }
+
+.button{
+    width: max-content;
+    padding: 1rem;
+    &:hover{
+        cursor: pointer;
+        scale: 0.9;
+    }
+}

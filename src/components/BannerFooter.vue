@@ -72,13 +72,18 @@ section{
 
             li a{
                 display: inline-block;
-                padding: 1rem;
                 text-decoration: none;
                 font-weight: 400;
                 text-transform: uppercase;
                 color: $white;
-                @include dflex;
                 margin: 1rem;
+                font-size: $fs-s;
+
+                @include dflex;
+            }
+            li img{
+                height: 60px;
+                padding-right: 0.5rem;
             }
     }
 }

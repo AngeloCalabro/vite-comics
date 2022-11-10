@@ -83,6 +83,8 @@ header{
     height: 118px;
     background-color: $white;
     text-align: center;
+    position: fixed;
+    z-index: 1000;
     div{
         height: 100%;
         @include center(between);
@@ -101,6 +103,7 @@ header{
                 text-transform: uppercase;
                 color: $black;
                 transition: color 0.3s;
+                font-size: $fs-s;
 
                 &.active,
                 &:hover {
