@@ -1,12 +1,31 @@
 <template>
     <main>
-        <div>--&gt; Content goes here &lt;--</div>
+        <section class="jumbo">
+        </section>
+        <section>
+            <div class="cards container">
+                <h1>Current series</h1>
+                <div class="row">
+                    <itemsComponent v-for="(item, index) in heroDc" :key="index" :obj="item"/>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 
 <script>
+import  {hero} from '../data/dc-comics';
+import itemsComponent from './itemsComponent.vue'
     export default {
+        components:{
+            itemsComponent
+        },
         name: 'MainComponent',
+        data(){
+            return{
+                heroDc : hero
+            }
+        }
     }
 </script>
 
@@ -15,14 +34,29 @@
 @use '../assets/styles/partials/mixins' as *;
 
 main{
-    min-height: 300px;
-    padding-top: 130px;
+    padding-top: 118px;
     background-color: $black;
-    color: $white;
-    div{
-        text-align: center;
-        text-transform: uppercase;
-    }
+    
+        section.jumbo{
+            min-height: 300px;
+            background-image: url('../assets/img/jumbotron.jpg');
+            background-position: top;
+            background-size: cover;
+        }
+
+        .cards {
+            text-align: center;
+            h1{
+                color: $white;
+            }
+            .row {
+                @include dflex;
+                .col {
+                    flex-basis: calc(100% / 6);
+                    // padding: 2rem;
+                    }
+            }
+        }
     }
 
 </style>

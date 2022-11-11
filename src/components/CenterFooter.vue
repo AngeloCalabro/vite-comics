@@ -2,37 +2,40 @@
     <section>
         <div class="container">
             <div class="cols">
-                <div>
-                    <ul>
-                        <h3>DC Comics</h3>
-                        <li v-for="(link, index) in links" :key="index">
-                        <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
-                        </li>
+                <div class="row">
+                    <div class="col-4">
+                        <ul>
+                            <h5>DC Comics</h5>
+                            <li v-for="(link, index) in links" :key="index">
+                            <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <h5>Shop</h5>
+                            <li v-for="(link, index) in shop" :key="index">
+                            <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="col-4">
+                        <h5>Shop</h5>
+                            <li v-for="(link, index) in linksDc" :key="index">
+                            <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
+                            </li>
                     </ul>
-                    <ul>
-                        <h3>Shop</h3>
-                        <li v-for="(link, index) in shop" :key="index">
-                        <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
-                        </li>
+                    <ul class="col-4">
+                        <h5>Sites</h5>
+                            <li v-for="(link, index) in sites" :key="index">
+                            <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
+                            </li>
                     </ul>
                 </div>
-                <ul>
-                    <h3>Shop</h3>
-                        <li v-for="(link, index) in linksDc" :key="index">
-                        <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
-                        </li>
-                </ul>
-                <ul>
-                    <h3>Sites</h3>
-                        <li v-for="(link, index) in sites" :key="index">
-                        <a :href="link.url" :class="{'active' : link.status}">{{link.text}}</a>
-                        </li>
-                </ul>
             </div>
-            <div>
-                <!-- <img class="logo-img" src="../assets/img/dc-logo-bg.png" alt="logo"> -->
+            <div class="cols logo-img">
+                <img class="image-dc" src="../assets/img/dc-logo-bg.png" alt="logo">
             </div>
         </div>
+        
     </section>
 </template>
 
@@ -187,7 +190,6 @@
 
             }
         }
-        
     }
 </script>
 
@@ -195,45 +197,44 @@
 @use '../assets/styles/partials/variables' as *;
 @use '../assets/styles/partials/mixins' as *;
 
-section{
+    section{
         background-image: url(../assets/img/footer-bg.jpg);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
         div.container{
-            @include center(between);
+            @include center();
             div.cols{
-                @include center(vertical);
+                // @include center(vertical);
                 ul{
                     list-style: none;
-                    margin: 1rem;
-                    h3{
-                        color: $white;
-                        font-weight: 600;
-                        text-transform: uppercase;
-                        padding-bottom: 1rem;
-                    }
-                    li a{
-                        display: inline-block;
-                        text-decoration: none;
-                        text-transform: capitalize;
-                        font-size: $fs-s;
-                        color: $grey;
-                        transition: color 0.3s;
+                }
+            }
+                h5{
+                    color: $white;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    padding-bottom: 1rem;
+                }
+                li a{
+                    display: inline-block;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    font-size: $fs-s;
+                    color: $grey;
+                    transition: color 0.3s;
 
-                        &:hover {
-                            color: $blue;
-                        }
+                    &:hover {
+                        color: $blue;
                     }
                 }
-
-            img.logo-img{
-                max-width: 100%;
-                overflow: hidden;
+            
+            div.logo-img{
+                img.image-dc{
+                overflow-y: hidden;
                 object-position: center;
-                object-fit: cover;
+                }
             }
         }
-            }
-            
     }
 </style>

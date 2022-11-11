@@ -76,13 +76,12 @@ section{
                 font-weight: 400;
                 text-transform: uppercase;
                 color: $white;
-                margin: 1rem;
-                font-size: $fs-s;
+                padding: 0.5rem;
 
                 @include dflex;
             }
             li img{
-                height: 60px;
+                width: 50px;
                 padding-right: 0.5rem;
             }
     }
