@@ -4,10 +4,11 @@
         </section>
         <section>
             <div class="cards container">
-                <h1>Current series</h1>
-                <div class="row">
+                <h2>Current series</h2>
+                <div class="row g-0">
                     <itemsComponent v-for="(item, index) in heroDc" :key="index" :obj="item"/>
                 </div>
+                <h3 class="button">Load Mode</h3>
             </div>
         </section>
     </main>
@@ -43,18 +44,28 @@ main{
             background-position: top;
             background-size: cover;
         }
-
         .cards {
             text-align: center;
-            h1{
+            position: relative;
+            h2{
                 color: $white;
+                background-color: $blue;
+                display: inline-block;
+                padding: 0.5rem;
+                position: absolute;
+                top: -30px;
+                left: 0px;
             }
             .row {
+                margin-top: 3rem;
+                margin-bottom: 3rem;
                 @include dflex;
-                .col {
-                    flex-basis: calc(100% / 6);
-                    // padding: 2rem;
-                    }
+            }
+            h3.button{
+                color: $white;
+                background-color: $blue;
+                display: inline-block;
+                cursor: pointer
             }
         }
     }
