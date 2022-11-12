@@ -1,3 +1,56 @@
+const links = [
+  {
+    text: 'characters',
+    url: '#',
+    status: false
+  },
+  {
+    text: 'comics',
+    url: '#',
+    status: true
+  },
+  {
+    text: 'movies',
+    url: '#',
+    status: false
+  },
+  {
+    text: 'tv',
+    url: '#',
+    status: false
+  },
+  {
+    text: 'games',
+    url: '#',
+    status: false
+  },
+  {
+    text: 'collectibles',
+    url: '#',
+    status: false
+  },
+  {
+    text: 'videos',
+    url: '#',
+    status: false
+  },
+  {
+    text: 'fans',
+    url: '#',
+    status: false
+  },
+  {
+    text: 'news',
+    url: '#',
+    status: false
+  },
+  {
+    text: 'shop',
+    url: '#',
+    status: false
+  },
+];
+
 const hero = [
   {
     "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
@@ -72,4 +125,72 @@ const hero = [
     "type": "graphic novel"
   }
 ];
-export { hero }
+
+const linksFooter = [
+  {
+    image: 'buy-comics-digital-comics.png',
+    text: 'digital comics',
+    url: '#',
+    status: false
+  },
+  {
+    image: 'buy-comics-merchandise.png',
+    text: 'dc merchandise',
+    url: '#',
+    status: true
+  },
+  {
+    image: 'buy-comics-subscriptions.png',
+    text: 'subscription',
+    url: '#',
+    status: false
+  },
+  {
+    image: 'buy-comics-shop-locator.png',
+    text: 'comic shop location',
+    url: '#',
+    status: false
+  },
+  {
+    image: 'buy-dc-power-visa.svg',
+    text: 'dc power visa',
+    url: '#',
+    status: false
+  }
+]
+const socials = [
+  {
+    image: 'footer-facebook.png',
+    text: 'facebook',
+    url: '#',
+    status: false
+  },
+  {
+    image: 'footer-twitter.png',
+    text: 'twitter',
+    url: '#',
+    status: true
+  },
+  {
+    image: 'footer-youtube.png',
+    text: 'youtube',
+    url: '#',
+    status: false
+  },
+  {
+    image: 'footer-pinterest.png',
+    text: 'pinterest',
+    url: '#',
+    status: false
+  },
+  {
+    image: 'footer-periscope.png',
+    text: 'periscope',
+    url: '#',
+    status: false
+  }
+];
+
+
+
+export { links, hero, linksFooter, socials }

@@ -6,7 +6,7 @@
             </div>
             <ul>
             <span>follow us</span>
-                <li v-for="(link, index) in socials" :key="index">
+                <li v-for="(link, index) in socialsFooter" :key="index">
                     <a :href="link.url">
                     <img :src="getImagePath(`../assets/img/${link.image}`)" :alt="link.text">
                     </a>
@@ -17,42 +17,44 @@
 </template>
 
 <script>
+import  {socials} from '../data/dc-comics';
     export default {
         name: "SocialFooter",
         data(){
             return{
-                socials: [
-                    {
-                        image: 'footer-facebook.png',
-                        text: 'facebook',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        image: 'footer-twitter.png',
-                        text: 'twitter',
-                        url: '#',
-                        status: true
-                    },
-                    {
-                        image: 'footer-youtube.png',
-                        text: 'youtube',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        image: 'footer-pinterest.png',
-                        text: 'pinterest',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        image: 'footer-periscope.png',
-                        text: 'periscope',
-                        url: '#',
-                        status: false
-                    }
-                ]
+                socialsFooter: socials,
+                // socials: [
+                //     {
+                //         image: 'footer-facebook.png',
+                //         text: 'facebook',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         image: 'footer-twitter.png',
+                //         text: 'twitter',
+                //         url: '#',
+                //         status: true
+                //     },
+                //     {
+                //         image: 'footer-youtube.png',
+                //         text: 'youtube',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         image: 'footer-pinterest.png',
+                //         text: 'pinterest',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         image: 'footer-periscope.png',
+                //         text: 'periscope',
+                //         url: '#',
+                //         status: false
+                //     }
+                // ]
             }
         },
         methods :{

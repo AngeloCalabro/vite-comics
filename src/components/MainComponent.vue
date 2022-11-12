@@ -57,9 +57,7 @@ main{
                 left: 0px;
             }
             .row {
-                margin-top: 3rem;
-                margin-bottom: 3rem;
-                @include dflex;
+                margin: 3rem auto;
             }
             h3.button{
                 color: $white;

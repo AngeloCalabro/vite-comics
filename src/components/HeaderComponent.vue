@@ -5,7 +5,7 @@
                 <img src="../assets/img/dc-logo.png" alt="logo">
             </a>
             <ul>
-                <li v-for="(link, index) in links" :key="index" :class="{'active' : link.status}">
+                <li v-for="(link, index) in linksNavBar" :key="index" :class="{'active' : link.status}">
                     <a :href="link.url" >{{link.text}}</a>
                 </li>
             </ul>
@@ -14,68 +14,70 @@
 </template>
 
 <script>
+import  {links} from '../data/dc-comics';
     export default {
         name: 'HeaderComponent',
         data(){
             return{
-                links: [
-                    {
-                        text: 'characters',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        text: 'comics',
-                        url: '#',
-                        status: true
-                    },
-                    {
-                        text: 'movies',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        text: 'tv',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        text: 'games',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        text: 'collectibles',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        text: 'videos',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        text: 'fans',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        text: 'news',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        text: 'shop',
-                        url: '#',
-                        status: false
-                    },
-                ]
+                linksNavBar : links,
+                // links: [
+                //     {
+                //         text: 'characters',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         text: 'comics',
+                //         url: '#',
+                //         status: true
+                //     },
+                //     {
+                //         text: 'movies',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         text: 'tv',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         text: 'games',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         text: 'collectibles',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         text: 'videos',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         text: 'fans',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         text: 'news',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         text: 'shop',
+                //         url: '#',
+                //         status: false
+                //     },
+                // ]
             }
         }
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use '../assets/styles/partials/variables' as *;
 @use '../assets/styles/partials/mixins' as *;
 

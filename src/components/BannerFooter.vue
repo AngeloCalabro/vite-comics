@@ -2,7 +2,7 @@
     <section>
         <div class="container">
             <ul>
-                <li v-for="(link, index) in links" :key="index">
+                <li v-for="(link, index) in linksFooterTop" :key="index">
                     <a :href="link.url">
                     <img :src="getImagePath(`../assets/img/${link.image}`)" :alt="link.text">
                     <span>{{link.text}}</span>
@@ -14,42 +14,44 @@
 </template>
 
 <script>
+import  {linksFooter} from '../data/dc-comics';
     export default {
         name: "BannerFooter",
         data(){
             return{
-                links: [
-                    {
-                        image: 'buy-comics-digital-comics.png',
-                        text: 'digital comics',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        image: 'buy-comics-merchandise.png',
-                        text: 'dc merchandise',
-                        url: '#',
-                        status: true
-                    },
-                    {
-                        image: 'buy-comics-subscriptions.png',
-                        text: 'subscription',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        image: 'buy-comics-shop-locator.png',
-                        text: 'comic shop location',
-                        url: '#',
-                        status: false
-                    },
-                    {
-                        image: 'buy-dc-power-visa.svg',
-                        text: 'dc power visa',
-                        url: '#',
-                        status: false
-                    }
-                ]
+                linksFooterTop:linksFooter,
+                // linksFooter: [
+                //     {
+                //         image: 'buy-comics-digital-comics.png',
+                //         text: 'digital comics',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         image: 'buy-comics-merchandise.png',
+                //         text: 'dc merchandise',
+                //         url: '#',
+                //         status: true
+                //     },
+                //     {
+                //         image: 'buy-comics-subscriptions.png',
+                //         text: 'subscription',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         image: 'buy-comics-shop-locator.png',
+                //         text: 'comic shop location',
+                //         url: '#',
+                //         status: false
+                //     },
+                //     {
+                //         image: 'buy-dc-power-visa.svg',
+                //         text: 'dc power visa',
+                //         url: '#',
+                //         status: false
+                //     }
+                // ]
             }
         },
         methods :{

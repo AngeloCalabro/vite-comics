@@ -3,12 +3,13 @@
         <div class="card">
             <img class="img-card img-fluid" :src="obj.thumb" :alt="obj.titolo">
         </div>
-        <div class="text-img">{{obj.series}}</div>
+        <div class="text-img">
+            <span>{{obj.series}}</span>
+        </div>
     </div>
 </template>
 
 <script>
-
     export default {
         name: 'itemsComponent',
         props: [
@@ -21,11 +22,10 @@
 @use '../assets/styles/partials/variables' as *;
 @use '../assets/styles/partials/mixins' as *;
 div.cols{
-    text-align: center;
     div.card{
         width: 150px;
         height: 150px;
-        margin: 1rem;
+        margin: 1rem auto;
         img.img-card{
             overflow: hidden;
             object-fit: cover;
